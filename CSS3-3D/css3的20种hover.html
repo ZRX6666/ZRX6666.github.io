@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>hover</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+</head>
+<style>
+   .row{
+       border: 2px solid black;
+   }
+    .bigbox {
+        margin: 0 auto;
+        width: 220px;
+        height: 220px;
+        border-radius: 50%;
+        text-align: center;
+        position: relative;
+        transition: ease-in-out .6s;
+        background-repeat: no-repeat;
+        background-position: center;
+        margin-bottom: 20px;
+        margin-top: 20px;
+       
+    }
+
+    .bigbox1 {
+        width: 220px;
+        height: 220px;
+        background-image: url('https://gudh.github.io/ihover/dist/images/assets/2.jpg');
+
+    }
+
+    .box {
+        width: 220px;
+        height: 220px;
+        border: 10px solid #ecab18;
+        border-right-color: #1ad280;
+        border-bottom-color: #1ad280;
+        border-radius: 50%;
+        transition: ease-in-out .6s;
+    }
+
+    .text {
+        width: 220px;
+        height: 220px;
+        border-radius: 50%;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        opacity: 0;
+        text-transform: uppercase;
+        transition: ease-in-out .6s;
+    }
+
+    .text h4 {
+        margin-top: 100px;
+    }
+
+    .bigbox:hover .box1 {
+        transform: rotateZ(180deg);
+    }
+
+    .bigbox:hover .text1 {
+        opacity: 1;
+        color: white;
+        background: rgba(0, 0, 0, 0.2);
+    }
+
+    .box2 {
+        background-image: url('https://gudh.github.io/ihover/dist/images/assets/4.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .text2 {
+        left: -200px;
+    }
+
+    .bigbox:hover .box2 {
+        transform: rotateZ(45deg);
+    }
+
+    .bigbox:hover .text2 {
+        opacity: 1;
+        color: white;
+        background: rgba(0, 0, 0, 0.8);
+        left: 0px;
+        top: 0;
+    }
+
+    .box3 {
+        width: 220px;
+        height: 220px;
+        background-image: url('http://gudh.github.io/ihover/dist/images/assets/5.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        border: none;
+        box-shadow: inset 0 0 0 16px rgba(255, 255, 255, 0.6), 0 1px 2px rgba(0, 0, 0, 0.3);
+    }
+
+    .text3 {
+        left: -200px;
+    }
+
+    .bigbox:hover .box3 {
+        transform: scale(0.5);
+        margin-left: 100px;
+    }
+
+    .bigbox:hover .text3 {
+        opacity: 1;
+        color: white;
+        background: rgba(0, 0, 0, 0.8);
+        left: 10px;
+        z-index: -1;
+    }
+
+    .box4 {
+        width: 220px;
+        height: 220px;
+        background-image: url('https://gudh.github.io/ihover/dist/images/assets/6.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        border: none;
+        box-shadow: inset 0 0 0 16px rgba(255, 255, 255, 0.6), 0 1px 2px rgba(0, 0, 0, 0.3);
+        transition: cubic-bezier(0.66, -0.38, 0.71, 1.05) .6s;
+    }
+
+    .text4 {
+        width: 220px;
+        height: 220px;
+        left: -200px;
+    }
+
+    .bigbox:hover .box4 {
+
+        margin-left: 220px;
+        opacity: 0;
+    }
+
+    .bigbox:hover .text4 {
+        opacity: 1;
+        color: white;
+        background: rgba(0, 0, 0, 0.8);
+        left: 0px;
+        top: 0;
+        z-index: -1;
+    }
+
+    .box5 {
+        width: 220px;
+        height: 220px;
+        background-image: url('https://gudh.github.io/ihover/dist/images/assets/7.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        border: none;
+        box-shadow: inset 0 0 0 16px rgba(255, 255, 255, 0.6), 0 1px 2px rgba(0, 0, 0, 0.3);
+        transition: ease-in-out .6s;
+    }
+
+    .text5 {
+        width: 220px;
+        height: 220px;
+        transform: scale(0.5);
+    }
+
+    .bigbox:hover .box5 {
+        transform: scale(1.5);
+        opacity: 0;
+    }
+
+    .bigbox:hover .text5 {
+        opacity: 1;
+        color: white;
+        background: rgba(0, 0, 0, 0.8);
+        left: 0px;
+        top: 0px;
+        transform: scale(1);
+    }
+
+    .box6 {
+        width: 220px;
+        height: 220px;
+        background-image: url('https://gudh.github.io/ihover/dist/images/assets/8.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        border: none;
+        box-shadow: inset 0 0 0 16px rgba(255, 255, 255, 0.6), 0 1px 2px rgba(0, 0, 0, 0.3);
+        transition: all 0.35s ease-in-out;
+    }
+
+    .text6 {
+        width: 220px;
+        height: 220px;
+        left: -200px;
+    }
+
+    .bigbox:hover .box6 {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    .bigbox:hover .text6 {
+        opacity: 1;
+        color: white;
+        background: rgba(0, 0, 0, 0.8);
+        left: 10px;
+        z-index: -1;
+    }
+
+    .box7 {
+        width: 220px;
+        height: 220px;
+        background-image: url('https://gudh.github.io/ihover/dist/images/assets/8.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        border: none;
+        box-shadow: inset 0 0 0 16px rgba(255, 255, 255, 0.6), 0 1px 2px rgba(0, 0, 0, 0.3);
+        transition: all 0.3s ease-in-out 0.3s;
+    }
+
+    .text7 {
+        width: 220px;
+        height: 220px;
+        left: 200px;
+        transform: scale(0.5);
+        transition: all 0.3s ease-in-out 0.3s;
+    }
+
+    .bigbox:hover .box7 {
+        transform: scale(0.5);
+        opacity: 0;
+        margin-left: -200px;
+
+    }
+
+    .bigbox:hover .text7 {
+        opacity: 1;
+        color: white;
+        background: rgba(0, 0, 0, 0.8);
+        left: 10px;
+        z-index: -1;
+        transform: scale(1);
+    }
+
+    .box8 {
+        width: 220px;
+        height: 220px;
+        background-image: url('https://gudh.github.io/ihover/dist/images/assets/5.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        border: none;
+        box-shadow: inset 0 0 0 16px rgba(255, 255, 255, 0.6), 0 1px 2px rgba(0, 0, 0, 0.3);
+        transition: all 0.35s ease-in-out;
+    }
+
+    .text8 {
+        width: 220px;
+        height: 220px;
+        transform: scale(0);
+    }
+
+    .bigbox:hover .box8 {
+
+        opacity: 0;
+        margin-left: 200px;
+        transform: rotate(180deg);
+    }
+
+    .bigbox:hover .text8 {
+        transform: scale(1);
+        opacity: 1;
+        color: white;
+        background: rgba(0, 0, 0, 0.8);
+        left: 10px;
+        z-index: -1;
+    }
+
+    .box9 {
+        width: 220px;
+        height: 220px;
+        background-image: url('https://gudh.github.io/ihover/dist/images/assets/4.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        border: none;
+        box-shadow: inset 0 0 0 16px rgba(255, 255, 255, 0.6), 0 1px 2px rgba(0, 0, 0, 0.3);
+        transition: all 0.35s ease-in-out;
+    }
+
+    .text9 {
+        width: 220px;
+        height: 220px;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        transition-property: none;
+        transition-delay: 1s;
+    }
+
+    .bigbox:hover .text9 {
+        opacity: 1;
+        color: white;
+        background: rgba(0, 0, 0, 0.3);
+       
+    }
+
+    .box10 {
+        width: 220px;
+        height: 220px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-image: url('https://gudh.github.io/ihover/dist/images/assets/3.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        border: none;
+        box-shadow: inset 0 0 0 16px rgba(255, 255, 255, 0.6), 0 1px 2px rgba(0, 0, 0, 0.3);
+        transition: all 0.35s ease-in-out;
+    }
+
+    .text10 {
+        width: 220px;
+        height: 220px;
+        left: 0;
+        opacity: 0;
+    }
+
+    .bigbox:hover .box10 {
+        transform: scale(0.5);
+        top: 55px;
+        z-index: 1;
+    }
+
+    .bigbox:hover .text10 {
+        top: 0;
+        opacity: 1;
+        color: white;
+        background: rgba(0, 0, 0, 0.8);
+    }
+
+    .box11 {
+        width: 220px;
+        height: 220px;
+        background-image: url('https://gudh.github.io/ihover/dist/images/assets/2.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        border: none;
+        box-shadow: inset 0 0 0 16px rgba(255, 255, 255, 0.6), 0 1px 2px rgba(0, 0, 0, 0.3);
+        transition: all 0.35s ease-in-out;
+
+    }
+
+    .text11 {
+        width: 220px;
+        height: 220px;
+        top: 0;
+        left: 0;
+    }
+
+    .bigbox:hover .box11 {
+        transform: rotateY(-180deg) scale(0);
+        opacity: 0;
+    }
+
+    .bigbox:hover .text11 {
+
+        transform: rotateY(180deg) scale(1);
+        opacity: 1;
+        background: rgba(0, 0, 0, 0.8);
+        color: white;
+    }
+
+    .bigbox:hover .text11>h4 {
+        transform: rotateY(180deg);
+    }
+
+
+    .box12 {
+        width: 220px;
+        height: 220px;
+        background-image: url('https://gudh.github.io/ihover/dist/images/assets/1.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        border: none;
+        box-shadow: inset 0 0 0 16px rgba(255, 255, 255, 0.6), 0 1px 2px rgba(0, 0, 0, 0.3);
+        transition: all 0.3s ease-in-out;
+        position: absolute;
+        top: 0;
+        left: 0;
+
+    }
+
+    .text12 {
+        width: 220px;
+        height: 220px;
+        top: 0;
+        left: 220px;
+    }
+
+    .bigbox:hover .box12 {
+        transform: rotateZ(180deg);
+        left: 220px;
+    }
+
+    .bigbox:hover .text12 {
+
+        transform: rotateZ(180deg);
+        left: 0;
+        opacity: 1;
+        background: rgba(0, 0, 0, 0.8);
+        color: white;
+    }
+
+    .bigbox:hover .text12>h4 {
+        transform: rotateZ(180deg);
+    }
+
+    .box13 {
+        width: 220px;
+        height: 220px;
+        background-image: url('https://gudh.github.io/ihover/dist/images/assets/8.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        border: none;
+        box-shadow: inset 0 0 0 16px rgba(255, 255, 255, 0.6), 0 1px 2px rgba(0, 0, 0, 0.3);
+        /* transition: all 0.3s ease-in-out; */
+        position: absolute;
+        top: 0;
+        left: 0;
+
+    }
+
+    .text13 {
+        width: 220px;
+        height: 220px;
+        top: 0;
+        left: 0;
+    }
+
+    .text13>h4 {
+        margin-left: -500px;
+        transition: all 0.3s;
+        color: white;
+    }
+
+    .bigbox:hover .text13 {
+        opacity: 1;
+        background: rgba(0, 0, 0, 0.3);
+
+
+    }
+
+    .bigbox:hover .text13>h4 {
+        color: white;
+        margin-left: 0;
+    }
+
+    .box14 {
+        width: 220px;
+        height: 220px;
+        background-image: url('https://gudh.github.io/ihover/dist/images/assets/7.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        border: none;
+        box-shadow: inset 0 0 0 16px rgba(255, 255, 255, 0.6), 0 1px 2px rgba(0, 0, 0, 0.3);
+        transition: all 0.3s ease-in-out;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform-origin: 100% 100%;
+    }
+
+    .text14 {
+        width: 220px;
+        height: 220px;
+        top: 0;
+        left: 0;
+        transform-origin: 0 0;
+        transform: rotateY(90deg);
+        background: rgba(0, 0, 0, 0.8);
+        color: white;
+        opacity: 1;
+    }
+
+    .bigbox:hover .box14 {
+        transform: rotateY(90deg);
+    }
+
+    .bigbox:hover .text14 {
+        transform: rotateY(0deg);
+    }
+
+    .box15 {
+        width: 220px;
+        height: 220px;
+        background-image: url('https://gudh.github.io/ihover/dist/images/assets/6.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        border: none;
+        box-shadow: inset 0 0 0 16px rgba(255, 255, 255, 0.6), 0 1px 2px rgba(0, 0, 0, 0.3);
+        transition: all 0.3s ease-in-out;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .text15 {
+        width: 220px;
+        height: 220px;
+        top: 0;
+        left: 0;
+        transform: rotateZ(0) scale(0);
+    }
+
+    .bigbox:hover .box15 {
+        transform: rotateZ(720deg) scale(0);
+
+    }
+
+    .bigbox:hover .text15 {
+        transform: rotateZ(720deg) scale(1);
+        opacity: 1;
+        background: rgba(0, 0, 0, 0.8);
+        color: white;
+    }
+
+
+    .box16 {
+        width: 220px;
+        height: 220px;
+        background-image: url('https://gudh.github.io/ihover/dist/images/assets/5.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        border: none;
+        box-shadow: inset 0 0 0 16px rgba(255, 255, 255, 0.6), 0 1px 2px rgba(0, 0, 0, 0.3);
+        transition: all 0.3s ease-in-out;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform-origin: 90% 40%;
+        z-index: 9;
+    }
+
+    .text16 {
+        width: 220px;
+        height: 220px;
+        top: 0;
+        left: 0;
+        opacity: 1;
+        background: rgba(0, 0, 0, 0.8);
+        color: white;
+    }
+
+    .bigbox:hover .box16 {
+        transform: rotateZ(-125deg);
+
+    }
+
+
+    .box17 {
+        width: 220px;
+        height: 220px;
+        background-image: url('https://gudh.github.io/ihover/dist/images/assets/4.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        border: none;
+        box-shadow: inset 0 0 0 16px rgba(255, 255, 255, 0.6), 0 1px 2px rgba(0, 0, 0, 0.3);
+        position: absolute;
+        top: 0;
+        left: 0;
+
+    }
+
+    .text17 {
+        width: 220px;
+        height: 220px;
+        top: 0;
+        left: 0;
+        transition: all .1s;
+        opacity: 1;
+    }
+
+    .text17>h4 {
+        transition: all .5s;
+        color: white;
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    .bigbox:hover .text17 {
+        opacity: 1;
+        background: rgba(0, 0, 0, 0.3);
+    }
+
+    .bigbox:hover .text17>h4 {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+
+
+    .box18 {
+        width: 220px;
+        height: 220px;
+        background-image: url('https://gudh.github.io/ihover/dist/images/assets/3.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        border: none;
+        box-shadow: inset 0 0 0 16px rgba(255, 255, 255, 0.6), 0 1px 2px rgba(0, 0, 0, 0.3);
+        transition: all 0.3s ease-in-out;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform-origin: 50% 0;
+        z-index: 9;
+    }
+
+    .text18 {
+        width: 220px;
+        height: 220px;
+        top: 0;
+        left: 0;
+        opacity: 1;
+        background: rgba(0, 0, 0, 0.8);
+        color: white;
+    }
+
+    .bigbox:hover .box18 {
+        transform: rotateX(180deg);
+    }
+
+
+
+    .box19 {
+        width: 220px;
+        height: 220px;
+        background-image: url('https://gudh.github.io/ihover/dist/images/assets/1.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        border: none;
+        box-shadow: inset 0 0 0 16px rgba(255, 255, 255, 0.6), 0 1px 2px rgba(0, 0, 0, 0.3);
+        transition: all 0.3s ease-in-out;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform-origin: 50% 0;
+
+    }
+
+    .text19 {
+        width: 220px;
+        height: 220px;
+        top: 0;
+        left: 0;
+        opacity: 1;
+        background: rgba(0, 0, 0, 0.3);
+        color: white;
+        transform: scale(0);
+    }
+
+    .bigbox:hover .text19 {
+        transform: scale(1);
+
+    }
+
+
+    .box20 {
+        width: 220px;
+        height: 220px;
+        background-image: url('https://gudh.github.io/ihover/dist/images/assets/2.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        border: none;
+        box-shadow: inset 0 0 0 16px rgba(255, 255, 255, 0.6), 0 1px 2px rgba(0, 0, 0, 0.3);
+        transition: all 0.5s;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform-origin: 50% 100%;
+    }
+
+    .text20 {
+        width: 220px;
+        height: 220px;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        background: rgba(0, 0, 0, 0.8);
+        color: white;
+        transform-origin: 50% 0;
+        transform: rotateX(-90deg);
+        transition: all .5s;
+
+    }
+
+    .bigbox:hover .box20 {
+       
+       transform:translate(0,55px) rotateX(75deg);
+       opacity: 0;
+      
+    }
+
+    .bigbox:hover .text20 {
+        transform: translate(0) rotateX(0);
+        opacity: 1;
+
+    }
+</style>
+
+<body>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="bigbox bigbox1">
+                <div class="box box1"></div>
+                <div class="text text1">
+                    <h4>Heading here</h4>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="bigbox">
+                <div class="box box2"></div>
+                <div class="text text2">
+                    <h4>Heading here</h4>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="bigbox">
+                <div class="box box3"></div>
+                <div class="text text3">
+                    <h4>Heading here</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-md-4">
+            <div class="bigbox">
+                <div class="box box4"></div>
+                <div class="text text4">
+                    <h4>Heading here</h4>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="bigbox">
+                <div class="box box5"></div>
+                <div class="text text5">
+                    <h4>Heading here</h4>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="bigbox">
+                <div class="box box6"></div>
+                <div class="text text6">
+                    <h4>Heading here</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4">
+            <div class="bigbox">
+                <div class="box box7"></div>
+                <div class="text text7">
+                    <h4>Heading here</h4>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="bigbox">
+                <div class="box box8"></div>
+                <div class="text text8">
+                    <h4>Heading here</h4>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="bigbox">
+                <div class="box box9"></div>
+                <div class="text text9">
+                    <h4>Heading here</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-md-4">
+            <div class="bigbox">
+                <div class="box box10"></div>
+                <div class="text text10">
+                    <h4>Heading here</h4>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="bigbox">
+                <div class="box box11"></div>
+                <div class="text text11">
+                    <h4>Heading here</h4>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="bigbox">
+                <div class="box box12"></div>
+                <div class="text text12">
+                    <h4>Heading here</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-md-4">
+            <div class="bigbox">
+                <div class="box box13"></div>
+                <div class="text text13">
+                    <h4>Heading here</h4>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="bigbox">
+                <div class="box box14"></div>
+                <div class="text text14">
+                    <h4>Heading here</h4>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="bigbox">
+                <div class="box box15"></div>
+                <div class="text text15">
+                    <h4>Heading here</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-md-4">
+            <div class="bigbox">
+                <div class="box box16"></div>
+                <div class="text text16">
+                    <h4>Heading here</h4>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="bigbox">
+                <div class="box box17"></div>
+                <div class="text text17">
+                    <h4>Heading here</h4>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="bigbox">
+                <div class="box box18"></div>
+                <div class="text text18">
+                    <h4>Heading here</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="bigbox">
+                <div class="box box19"></div>
+                <div class="text text19">
+                    <h4>Heading here</h4>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="bigbox">
+                <div class="box box20"></div>
+                <div class="text text20">
+                    <h4>Heading here</h4>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>accordion</title>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/minireset.css/0.0.2/minireset.min.css">
+    <style>
+       
+         ul{
+             margin: 0 auto;
+            width: 700px;
+            position: relative;
+            overflow: hidden;
+            /* background: yellow; */
+        }
+         ul li{
+            width: 200px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            /* transition: all .3s; */
+        }
+        ul li:nth-of-type(1){
+            position: relative;
+        }
+        ul li:nth-of-type(2){
+           left: 200px;
+        }
+        ul li:nth-of-type(3){
+            left: 300px;
+        }
+        ul li:nth-of-type(4){
+           left: 400px;
+        }
+        ul li:nth-of-type(5){
+            left: 500px;
+        }
+        ul li:nth-of-type(6){
+           left: 600px;
+        }
+        ul li img{
+            width: 100%;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+        <ul>
+            <li><img src="./img/datouwang1.jpg" alt=""></li>
+            <li><img src="./img/datouwang2.jpg" alt=""></li>
+            <li><img src="./img/datouwang3.jpg" alt=""></li>
+            <li><img src="./img/datouwang4.jpg" alt=""></li>
+            <li><img src="./img/datouwang5.jpg" alt=""></li>
+            <li><img src="./img/datouwang6.jpg" alt=""></li>
+            
+        </ul>
+
+</body>
+<script src="https://cdn.staticfile.org/jquery/1.12.4/jquery.min.js"></script>
+<script>
+
+
+
+    //hover事件
+    // $('li').hover(function () {
+    //     var currentIndex = $(this).index();
+    //     console.log(currentIndex)
+    //     $('li').each(function (index,element) {
+    //         console.log(index,element)
+    //        if (index <= currentIndex) {
+    //            $(element).animate({'left':100*index + 'px'},300)
+    //        } else {
+    //         $(element).animate({'left':100*(index-1) + 200 + 'px'},300)
+    //        }
+    //     })
+    // })
+
+
+    //点击事件
+    // $('li').click(function () {
+    //     var currentIndex = $(this).index();
+    //     console.log(currentIndex)
+    //     $('li').each(function (index,element) {
+            
+    //         if (index <= currentIndex) {
+                
+    //             $(element).css('left', 100 * index + 'px');
+    //             // $(element).animate({'left': index*100 + 'px'},300);
+    //         } else {
+                
+    //             $(element).css('left', 100 * (index - 1) + 200 + 'px');
+    //             // $(element).animate({'left': (index-1)*100 + 200 + 'px'},300);
+    //         }
+    //     })
+    // })
+
+
+    //鼠标滑动事件
+    $('li').mouseover(function () {
+       
+        var currentIndex = $(this).index();
+        $('li').each(function (index , element) {
+            console.log(index);
+            if (index <= currentIndex) {
+                $(element).animate({'left' : 100 * index + 'px'});
+            } else {
+                $(element).animate({'left' : 100 * (index-1) + 200 + 'px'})
+            }
+            
+          })
+    })
+    $('li').mouseout(function () {
+        $('li').clearQueue();
+    })
+</script>
+    
+</body>
+</html>
