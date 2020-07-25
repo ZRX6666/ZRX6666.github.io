@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .stage {
+            width: 500px;
+            height: 500px;
+            background: lightblue;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            position: relative;
+        }
+
+        .stage li {
+            /* background: lightcoral; */
+            border-radius: 10px;
+            box-shadow: 0 0 0 5px white inset;
+            background-image: url('./a2.png');
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition:  all .3s;
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="stage"> </ul>
+    <button onclick="shuffle()">btn</button>
+    <script>
+        var stage = document.querySelector('ul');
+        var size = 3
+        for (var i = 0; i < size * size; i++) {
+            var node = document.createElement("li");
+            node.style.width = 100 / size + "%"
+            node.style.height = 100 / size + "%"
+            node.style.backgroundColor = "red"
+
+
+            node.style.backgroundPosition = (i % size) * -100 + "% " +
+             Math.floor(i / size) * -100 + "%"
+
+            node.style.left = (i % size) * (100 / size) + "%";
+
+            node.style.top = Math.floor(i / size) * (100 / size) + "%";
+
+
+            node.style.backgroundSize = size * 100 + '% auto'
+
+            node.draggable = 'true';
+
+            node.id = "card" + i;
+
+            stage.appendChild(node);
+        }
+        var cards = stage.querySelectorAll("li");
+
+        function random() {
+            return Math.floor(Math.random() * size * size)
+        }
+
+        function shuffle() {
+            var arr = [];
+            for (var i = 0; i < size * size; i++) {
+                arr.push(i);
+
+            }
+            var tmp = [];
+            for (var i = 0; i < size*size; i++) {
+                tmp.push(arr.splice(Math.floor(Math.random() * arr.length), 1)[0])
+
+            }
+            console.log(tmp);
+            cards.forEach(function (element, index) {
+                element.style.left =
+                    (tmp[index] % size) * (100 / size) + "%";
+                element.style.top =
+                    Math.floor(tmp[index] / size) * (100 / size) + "%"
+            });
+        }
+
+        cards.forEach(function (element, index) {
+            element.ondragstart = function (event) {
+                event.dataTransfer.setData("text", event.target.id);
+            }
+            element.ondragover = function (event) {
+                event.preventDefault();
+            }
+
+            element.ondrop = function (event) {
+                var e1 = event.target;
+                var e2 = document.getElementById(event.dataTransfer.getData("text"));
+
+                var tmp = {
+                    top: e1.style.top,
+                    left: e1.style.left,
+                }
+
+                e1.style.top = e2.style.top;
+                e1.style.left = e2.style.left;
+
+                e2.style.top = tmp.top;
+                e2.style.left = tmp.left;
+
+                var check = Array.prototype.every.call(cards, function (element, index) {
+                    return (parseInt(element.style.top) ==
+                        parseInt(Math.floor(index / size) * (100 / size) + "%") &&
+                        parseInt(element.style.left) ==
+                        parseInt((index % size) * (100 / size) + "%")
+                    );
+
+                    console.log(check);
+
+                    if (check) {
+                        console.log("成功")
+                    }
+                })
+            }
+        })
+    </script>
+</body>
+
+</html>
