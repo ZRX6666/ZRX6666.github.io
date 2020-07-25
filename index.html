@@ -1,167 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
-    <title>Document</title>
-    <style>
-       body{
-        background: lightblue;   
-       }
-       .bigbox{
-          margin: 0 auto;
-          width: 1000px;
-         
-       }
-        .project {
-           
-           text-align: center;
-        }
-
-      
-
-        .bigbox .project .content {
-        
-            display: flex;
-            justify-content: center;
-        }
-
-        .bigbox .project .content .box {
-            /* flex: 1; */
-            width: 300px;
-            height: 300px;
-            margin-left: 10px;
-        }
-        .bigbox .project .content .box a {
-            width: inherit;
-            height: inherit;
-            display: block;
-        }
-
-        .content1 .box:nth-of-type(1){
-            /* background-image:url('https://raw.githubusercontent.com/ZRX6666/ZRX6666github.io/master/images/5.PNG'); */
-            background-image: url('./images/5.PNG');
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position:center ;
-        }
-        .content1 .box:nth-of-type(2){
-            /* background-image:url('https://raw.githubusercontent.com/ZRX6666/ZRX6666github.io/master/images/4.PNG'); */
-            background-image: url('./images/4.PNG');
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position:center ;
-        }
-
-        .content2 .box:nth-of-type(1){
-            /* background-image:url('https://raw.githubusercontent.com/ZRX6666/ZRX6666github.io/master/images/6.PNG'); */
-            background-image: url('./images/6.PNG');
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position:center ;
-        }
-        .content2 .box:nth-of-type(2){
-            /* background-image:url('https://raw.githubusercontent.com/ZRX6666/ZRX6666github.io/master/images/2.PNG'); */
-            background-image: url('./images/2.PNG');
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position:center ;
-        }
-        .content2 .box:nth-of-type(3){
-            /* background-image:url('https://raw.githubusercontent.com/ZRX6666/ZRX6666github.io/master/images/1.PNG'); */
-            background-image: url('./images/1.PNG');
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position:center ;
-        }
-
-
-        .content3 .box:nth-of-type(1){
-            /* background-image:url('https://raw.githubusercontent.com/ZRX6666/ZRX6666github.io/master/images/8.PNG'); */
-            background-image: url('./images/8.PNG');
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position:center ;
-        }
-        .content3 .box:nth-of-type(2){
-            /* background-image:url('https://raw.githubusercontent.com/ZRX6666/ZRX6666github.io/master/images/7.PNG'); */
-            background-image: url('./images/7.PNG');
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position:center ;
-        }
-        .content3 .box:nth-of-type(3){
-            /* background-image:url('https://raw.githubusercontent.com/ZRX6666/ZRX6666github.io/master/images/3.PNG'); */
-            background-image: url('./images/3.PNG');
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position:center ;
-        }
-        .content3 .box:nth-of-type(4){
-            /* background-image:url('https://raw.githubusercontent.com/ZRX6666/ZRX6666github.io/master/images/9.PNG'); */
-            background-image: url('./images/9.PNG');
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position:center ;
-        }
-       
-       
-    </style>
+    <title>个人主页</title>
+    <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="./css/style.css">
 </head>
-
 <body>
-   <div class="bigbox">
-        <div class="project">
-                <h1>bootstrap</h1>
-                <div class="content1 content">
-                    <div class="box">
-                        <a href="https://zrx6666.github.io/bootstrap项目/项目2/index.html"></a>
-                    </div>
-                    <div class="box">
-                        <a href="https://zrx6666.github.io/bootstrap项目/项目1/topvet.html"></a>
-                    </div>
-        
-                </div>
-            </div>
-        
-            <div class="project">
-                <h1>javascript</h1>
-                <div class="content2 content">
-                    <div class="box">
-                        <a href="https://zrx6666.github.io/accordion/手风琴点击和鼠标滑动.html"></a>
-                    </div>
-                    <div class="box">
-                        <a href="https://zrx6666.github.io/Greedy Snake/index.html"></a>
-                    </div>
-                    <div class="box">
-                        <a href="https://zrx6666.github.io/magnifier/放大镜.html"></a>
-                    </div>
-                </div>
-            </div>
-        
-            <div class="project">
-                <h1>CSS3-2D-3D</h1>
-                <div class="content3 content">
-                    <div class="box">
-                        <a href="https://zrx6666.github.io/CSS3-3D/css3的20种hover.html"></a>
-                    </div>
-                    <div class="box">
-                        <a href="https://zrx6666.github.io/视差/girl-on-run.html"></a>
-                    </div>
-                    <div class="box">
-                        <a href="https://zrx6666.github.io/CSS3-3D/3D-chart.html"></a>
-                    </div>
-                    <div class="box">
-                            <a href="https://zrx6666.github.io/CSS3-3D/cube.html"></a>
-                        </div>
-                </div>
-            </div>
-   </div>
+<div class="header">
+  <div class="container">
+    <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">庄瑞雄</a>
+      </div>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="project">
+            <a href="#" class="title title1">Bootstrap</a>
+           
+          </li>
+          <li class="project">
+              <a href="#" class="title title2">javascript</a>
+            
+            </li>
+            <li class="project">
+                <a href="#" class="title title3">CSS3-2D-3D </a>
+              
+              </li>
+              <li class="project">
+                  <a href="#" class="title title4">Vue</a>
+                 
+                </li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+ </div>
+</div>
 
-   <script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+<div class="bg">
+  <div class="container">
+    <h1></h1>
+  </div>
+</div>
+
+<div class="bootstrap">
+  <div class="container">
+    <h1>Bootstrap</h1>
+    <div class="row">
+      <div class="col-md-6 item">
+        <div class="box">
+          <a href="https://zrx6666.github.io/bootstrap项目/项目1/topvet.html"></a>
+        </div>
+      </div>
+      <div class="col-md-6 item">
+        <div class="box">
+          <a href="https://zrx6666.github.io/bootstrap项目/项目2/index.html"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="javascript">
+  <div class="container">
+    <h1>Javascript</h1>
+    <div class="row">
+      <div class="col-md-3 item"><div class="box"><a href="https://zrx6666.github.io/accordion/手风琴点击和鼠标滑动.html"></a></div></div>
+      <div class="col-md-3 item"><div class="box"><a href="https://zrx6666.github.io/magnifier/放大镜.html"></a></div></div>
+      <div class="col-md-3 item"><div class="box"><a href=""></a></div></div>
+      <div class="col-md-3 item"><div class="box"><a href="https://zrx6666.github.io/Greedy Snake/index.html"></a></div></div>
+    </div>
+  </div>
+</div>
+
+<div class="CSS3-2D-3D">
+  <div class="container">
+    <h1>CSS3-2D-3D</h1>
+    <div class="row">
+      <div class="col-md-3 item"><div class="box"><a href="https://zrx6666.github.io/CSS3-3D/3D-chart.html"></a></div></div>
+      <div class="col-md-3 item"><div class="box"><a href="https://zrx6666.github.io/CSS3-3D/cube.html"></a></div></div>
+      <div class="col-md-3 item"><div class="box"><a href="https://zrx6666.github.io/CSS3-3D/css3的20种hover.html"></a></div></div>
+      <div class="col-md-3 item"><div class="box"><a href=""></a></div></div>
+    </div>
+  </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
+<script>
+ let query = (seletor)=>{
+   return document.querySelector(seletor);
+ }
+ let arr = ['努','力','成','为','一','名','优','秀','的','前','端','开','发','工','程','师'];
+ let cout = 0
+//  console.log(text)
+ let type = setInterval(() => {
+  
+   if (cout < arr.length) {
+    query('h1').innerText +=arr[cout];
+    cout ++;
+   }else{
+     clearInterval(type)
+   }
+ }, 500);
+
+ query('.title1').onclick = () => {
+
+   $('html').animate({scrollTop:query('.bootstrap').offsetTop},500);
+ }
+ query('.title2').onclick = () => {
+
+   $('html').animate({scrollTop:query('.javascript').offsetTop},500);
+ }
+ query('.title3').onclick = () => {
+
+   $('html').animate({scrollTop:query('.CSS3-2D-3D').offsetTop},500);
+ }
+ query('.title4').onclick = () => {
+
+  //  $('html').animate({scrollTop:query('.vue').offsetTop},500);
+ }
+</script>
 </body>
-
 </html>
