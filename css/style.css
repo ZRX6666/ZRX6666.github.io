@@ -184,4 +184,9 @@
 .CSS3-2D-3D .container .row .item a:hover {
   transform: scale(1.5);
 }
+@media (max-width: 500px) {
+  .bg .container h1 {
+    font-size: 30px;
+  }
+}
 /*# sourceMappingURL=./style.css.map */
